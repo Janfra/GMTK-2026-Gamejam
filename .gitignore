@@ -6,6 +6,9 @@
 # This template is maintained from the github/gitignore repository
 # and distributed under Creative Commons Zero v1.0 Universal license.
 
+# Ignore personal preference files
+.vsconfig
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
