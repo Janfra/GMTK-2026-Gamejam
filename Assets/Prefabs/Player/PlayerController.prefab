@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368075103692480701}
   - component: {fileID: 3028146914527975021}
+  - component: {fileID: 4490612704694866983}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -49,74 +50,69 @@ MonoBehaviour:
   _canAutomaticallyMatchEnable: 1
   _assetSource: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _events:
-  - rid: 8660545745693966541
-  - rid: 8660545745693966542
-  - rid: 8660545745693966543
-  - rid: 8660545745693966544
-  - rid: 8660545745693966545
-  - rid: 8660545745693966546
-  - rid: 8660545745693966547
-  - rid: 8660545745693966548
-  - rid: 8660545745693966549
-  - rid: 8660545745693966550
-  - rid: 8660545745693966551
-  - rid: 8660545745693966552
-  - rid: 8660545745693966553
-  - rid: 8660545745693966554
-  - rid: 8660545745693966555
-  - rid: 8660545745693966556
-  - rid: 8660545745693966557
-  - rid: 8660545745693966558
-  - rid: 8660545745693966559
+  - rid: 8660545762468036636
+  - rid: 8660545762468036632
+  - rid: 8660545762468036639
+  - rid: 8660545762338800636
+  - rid: 8660545762338800637
+  - rid: 8660545762338800638
+  - rid: 8660545762338800639
+  - rid: 8660545762468036608
+  - rid: 8660545762468036609
+  - rid: 8660545762468036610
+  - rid: 8660545762468036611
+  - rid: 8660545762468036612
+  - rid: 8660545762468036613
+  - rid: 8660545762468036614
+  - rid: 8660545762468036615
+  - rid: 8660545762468036616
+  - rid: 8660545762468036617
+  - rid: 8660545762468036618
+  - rid: 8660545762468036619
+  - rid: 8660545762468036620
   references:
     version: 2
     RefIds:
-    - rid: 8660545745693966541
-      type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
-      data:
-        _name: Move
-        _canDisableInputAction: 0
-        _shouldRespectActiveEnableState: 0
-        InputStarted:
-          m_PersistentCalls:
-            m_Calls: []
-        InputPerformed:
-          m_PersistentCalls:
-            m_Calls: []
-        InputCancelled:
-          m_PersistentCalls:
-            m_Calls: []
-    - rid: 8660545745693966542
-      type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
-      data:
-        _name: Look
-        _canDisableInputAction: 0
-        _shouldRespectActiveEnableState: 0
-        InputStarted:
-          m_PersistentCalls:
-            m_Calls: []
-        InputPerformed:
-          m_PersistentCalls:
-            m_Calls: []
-        InputCancelled:
-          m_PersistentCalls:
-            m_Calls: []
-    - rid: 8660545745693966543
+    - rid: 8660545762338800636
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
-        _name: Attack
+        _name: Select
         _canDisableInputAction: 0
         _shouldRespectActiveEnableState: 0
         InputStarted:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 4490612704694866983}
+              m_TargetAssemblyTypeName: GMTK.PlayerComponent, Assembly-CSharp
+              m_MethodName: TriggerSelectStarted
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
         InputPerformed:
           m_PersistentCalls:
             m_Calls: []
         InputCancelled:
           m_PersistentCalls:
-            m_Calls: []
-    - rid: 8660545745693966544
+            m_Calls:
+            - m_Target: {fileID: 4490612704694866983}
+              m_TargetAssemblyTypeName: GMTK.PlayerComponent, Assembly-CSharp
+              m_MethodName: TriggerSelectEnded
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 8660545762338800637
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Interact
@@ -131,7 +127,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966545
+    - rid: 8660545762338800638
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Crouch
@@ -146,7 +142,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966546
+    - rid: 8660545762338800639
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Jump
@@ -161,7 +157,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966547
+    - rid: 8660545762468036608
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Previous
@@ -176,7 +172,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966548
+    - rid: 8660545762468036609
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Next
@@ -191,7 +187,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966549
+    - rid: 8660545762468036610
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Sprint
@@ -206,7 +202,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966550
+    - rid: 8660545762468036611
       type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Navigate
@@ -221,7 +217,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966551
+    - rid: 8660545762468036612
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Submit
@@ -236,7 +232,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966552
+    - rid: 8660545762468036613
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Cancel
@@ -251,7 +247,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966553
+    - rid: 8660545762468036614
       type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Point
@@ -266,7 +262,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966554
+    - rid: 8660545762468036615
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: Click
@@ -281,7 +277,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966555
+    - rid: 8660545762468036616
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: RightClick
@@ -296,7 +292,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966556
+    - rid: 8660545762468036617
       type: {class: InputBroadcaster, ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: MiddleClick
@@ -311,7 +307,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966557
+    - rid: 8660545762468036618
       type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: ScrollWheel
@@ -326,7 +322,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966558
+    - rid: 8660545762468036619
       type: {class: 'InputBroadcaster`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: TrackedDevicePosition
@@ -341,7 +337,7 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
-    - rid: 8660545745693966559
+    - rid: 8660545762468036620
       type: {class: 'InputBroadcaster`1[[UnityEngine.Quaternion, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
       data:
         _name: TrackedDeviceOrientation
@@ -356,3 +352,72 @@ MonoBehaviour:
         InputCancelled:
           m_PersistentCalls:
             m_Calls: []
+    - rid: 8660545762468036632
+      type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
+      data:
+        _name: Look
+        _canDisableInputAction: 0
+        _shouldRespectActiveEnableState: 0
+        InputStarted:
+          m_PersistentCalls:
+            m_Calls: []
+        InputPerformed:
+          m_PersistentCalls:
+            m_Calls: []
+        InputCancelled:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 8660545762468036636
+      type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
+      data:
+        _name: Move
+        _canDisableInputAction: 0
+        _shouldRespectActiveEnableState: 0
+        InputStarted:
+          m_PersistentCalls:
+            m_Calls: []
+        InputPerformed:
+          m_PersistentCalls:
+            m_Calls: []
+        InputCancelled:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 8660545762468036639
+      type: {class: 'InputBroadcaster`1[[UnityEngine.Vector2, UnityEngine.CoreModule]]', ns: Janito.Prototyping.Input, asm: Janito.PrototypingTools}
+      data:
+        _name: Cursor
+        _canDisableInputAction: 0
+        _shouldRespectActiveEnableState: 0
+        InputStarted:
+          m_PersistentCalls:
+            m_Calls: []
+        InputPerformed:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 4490612704694866983}
+              m_TargetAssemblyTypeName: GMTK.PlayerComponent, Assembly-CSharp
+              m_MethodName: UpdateSelectionPosition
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        InputCancelled:
+          m_PersistentCalls:
+            m_Calls: []
+--- !u!114 &4490612704694866983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373732379735039648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5877ee8d9dbe04ab13f93abec4da12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.PlayerComponent
