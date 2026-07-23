@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P
+  m_text: 9
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -148,7 +148,9 @@ GameObject:
   - component: {fileID: 5075447259185670349}
   - component: {fileID: 919813550782767058}
   - component: {fileID: 3119144295277417233}
-  - component: {fileID: 1563091514064495076}
+  - component: {fileID: 5153139307321517403}
+  - component: {fileID: 208728329726002281}
+  - component: {fileID: 392640846408073329}
   m_Layer: 0
   m_Name: SelectableTile
   m_TagString: Untagged
@@ -225,8 +227,8 @@ SpriteRenderer:
   m_Color: {r: 0.85506403, g: 0.96073073, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 0.6, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -271,14 +273,14 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.6, y: 0.7}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1563091514064495076
+--- !u!114 &5153139307321517403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,10 +289,114 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220625252655743597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b4da59b5344b34badfee350c859398, type: 3}
+  m_Script: {fileID: 11500000, guid: 6815d9091e37e6540ab1dd3bb11c315f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GMTK.SelectableComponent
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.DraggableTileComponent
   _tileText: {fileID: 4145050681065106461}
+  _deselectOnFocusLost: 1
+  _onSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 392640846408073329}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a6de5dad97eca9a4e8af7cbfe05551e2, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.AnimationTools
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 392640846408073329}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 770d10d56ccfed441a7c696c768adcba, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.AnimationTools
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onMouseEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 392640846408073329}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f5e3fa73bf7c17d43a0297546cbab578, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.AnimationTools
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onMouseExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 392640846408073329}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 01347389348fb3f46a7c4641d4bb9bb7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.AnimationTools
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!95 &208728329726002281
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3220625252655743597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8a4d0b8bed1c8b479b53194890c84e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &392640846408073329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3220625252655743597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0c4921506261c4581ee6bc47f273f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Janito.AnimationTools::Janito.Animations.AnimatorModifierComponent
+  m_Animator: {fileID: 208728329726002281}
+  m_StaticValueListeners: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8741377230818856307
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +433,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 60, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1017494402784352161
 Canvas:

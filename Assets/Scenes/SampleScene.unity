@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3028146914527975021, guid: fbd5476275389394c846cc65213985f1, type: 3}
+      propertyPath: managedReferences[8660545762338800636].InputCancelled.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8373732379735039648, guid: fbd5476275389394c846cc65213985f1, type: 3}
       propertyPath: m_Name
       value: PlayerController
@@ -511,11 +515,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5075447259185670349, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5075447259185670349, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.66
       objectReference: {fileID: 0}
     - target: {fileID: 5075447259185670349, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_LocalPosition.z
