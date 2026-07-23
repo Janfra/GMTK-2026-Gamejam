@@ -1,5 +1,3 @@
-using Janito.EditorExtras;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,16 +6,13 @@ namespace GMTK
     public class TileComponent : MonoBehaviour, ISelectable
     {
         [SerializeField]
-        private TMP_Text _tileText;
-
-        [SerializeField]
         private bool _deselectOnFocusLost = true;
 
         [Header("Events")]
         [SerializeField]
-        private UnityEvent _onSelect;
+        private UnityEvent<PlayerComponent> _onSelect;
         [SerializeField]
-        private UnityEvent _onDeselect;
+        private UnityEvent<PlayerComponent> _onDeselect;
         [SerializeField]
         private UnityEvent _onMouseEnter;
         [SerializeField]
@@ -26,29 +21,9 @@ namespace GMTK
         public bool IsSelected => _isSelected;
 
         private bool _isSelected;
+        private PlayerComponent _selector;
 
-        private void Awake()
-        {
-            if (_tileText == null)
-            {
-                _tileText = GetComponentInChildren<TMP_Text>();
-            }
-        }
-
-        private void Start()
-        {
-            if (_tileText == null)
-            {
-                this.LogErrorInDevelopment("TileComponent: TMP_Text component is not assigned or found in children.");
-            }   
-        }
-
-        public void SetContent(string content)
-        {
-            _tileText.text = content;
-        }
-
-        public void Select()
+        public void Select(PlayerComponent player)
         {
             if (IsSelected)
             {
@@ -56,7 +31,8 @@ namespace GMTK
             }
 
             _isSelected = true;
-            _onSelect.Invoke();    
+            _onSelect.Invoke(player);
+            _selector = player;
         }
 
         public void Deselect()
@@ -66,7 +42,7 @@ namespace GMTK
                 return;
             }
 
-            _onDeselect.Invoke();
+            _onDeselect.Invoke(_selector);
             _isSelected = false;
         }
 

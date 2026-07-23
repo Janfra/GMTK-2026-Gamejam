@@ -2,21 +2,21 @@ using UnityEngine;
 
 namespace GMTK
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class DraggableTileComponent : TileComponent, ISelectable, IDraggable
     {
-        public void StartDrag()
+        Rigidbody2D _rb;
+        public bool IsBeingDragged { get => _isBeingDragged; set => _isBeingDragged = value; }
+        private bool _isBeingDragged;
+
+        private void Awake()
         {
-            throw new System.NotImplementedException();
+            _rb = GetComponent<Rigidbody2D>();
         }
 
         public void UpdateDesiredDragPosition(Vector2 position)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void EndDrag()
-        {
-            throw new System.NotImplementedException();
+            _rb.MovePosition(position);
         }
     }
 }

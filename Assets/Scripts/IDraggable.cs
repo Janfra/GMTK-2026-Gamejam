@@ -4,8 +4,7 @@ namespace GMTK
 {
     public interface IDraggable
     {
-        public void StartDrag();
+        public bool IsBeingDragged { get; set; }
         public void UpdateDesiredDragPosition(Vector2 position);
-        public void EndDrag();
     }
 }

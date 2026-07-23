@@ -6,40 +6,35 @@ namespace GMTK
     {
         private Vector3 _cursorPosition;
         private IDraggable _currentDraggable;
-        private ISelectable _lastSelectable;
 
-        public void TriggerSelectStarted()
+        public void OnSelectStart()
         {
             var collision = Physics2D.OverlapPoint(_cursorPosition);
             if (collision == null)
             {
-                ClearLastSelected();
                 return;
-            }
-
-            if (collision.TryGetComponent(out ISelectable selectable))
-            {
-                if (selectable != _lastSelectable)
-                {
-                    ClearLastSelected();
-                }
-
-                if (!selectable.IsSelected)
-                {
-                    selectable.Select();
-                    _lastSelectable = selectable;
-                }
-                else
-                {
-                    selectable.Deselect();
-                }
             }
 
             if (collision.TryGetComponent(out IDraggable draggable))
             {
                 // Start dragging the draggable object
                 _currentDraggable = draggable;
+                _currentDraggable.IsBeingDragged = true;
             }
+        }
+
+        public void OnSelectEnd()
+        {
+            if (_currentDraggable != null)
+            {
+                _currentDraggable.IsBeingDragged = false;
+                _currentDraggable = null;
+            }
+        }
+
+        private void LateUpdate()
+        {
+            _currentDraggable?.UpdateDesiredDragPosition(_cursorPosition);
         }
 
         public void UpdateSelectionPosition(Vector2 pointerPosition)
@@ -49,16 +44,10 @@ namespace GMTK
             _cursorPosition = camera.ScreenToWorldPoint(new Vector3(pointerPosition.x, pointerPosition.y, distance));
         }
 
-        private void ClearLastSelected()
-        {
-            _lastSelectable?.OnFocusLost();
-            _lastSelectable = null;
-        }
-
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(_cursorPosition, 0.1f);
+            Gizmos.DrawSphere(_cursorPosition, 0.01f);
         }
     }
 }
