@@ -4,12 +4,15 @@ namespace GMTK
 { 
     public class PlayerComponent : MonoBehaviour
     {
+        [SerializeField]
+        private LayerMask _selectionMask;
+
         private Vector3 _cursorPosition;
         private IDraggable _currentDraggable;
 
         public void OnSelectStart()
         {
-            var collision = Physics2D.OverlapPoint(_cursorPosition);
+            var collision = Physics2D.OverlapPoint(_cursorPosition, _selectionMask.value);
             if (collision == null)
             {
                 return;

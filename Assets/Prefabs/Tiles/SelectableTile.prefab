@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 208728329726002281}
   - component: {fileID: 392640846408073329}
   - component: {fileID: 9111691536462008516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SelectableTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

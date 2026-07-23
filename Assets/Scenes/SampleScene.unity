@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: managedReferences[8660545762338800636].InputCancelled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnSelectEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 4490612704694866983, guid: fbd5476275389394c846cc65213985f1, type: 3}
+      propertyPath: _selectionMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8373732379735039648, guid: fbd5476275389394c846cc65213985f1, type: 3}
       propertyPath: m_Name
       value: PlayerController
