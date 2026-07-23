@@ -25,6 +25,13 @@
       },
       "hash": "6e9096e48e5c43b2adb5d24b1547c006a198dca6"
     },
+    "com.janito.timerspackage": {
+      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoTimersPackage",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "6e9096e48e5c43b2adb5d24b1547c006a198dca6"
+    },
     "com.unity.2d.animation": {
       "version": "15.1.0",
       "depth": 0,
