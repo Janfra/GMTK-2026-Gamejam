@@ -167,10 +167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3028146914527975021, guid: fbd5476275389394c846cc65213985f1, type: 3}
-      propertyPath: managedReferences[8660545762338800636].InputCancelled.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8373732379735039648, guid: fbd5476275389394c846cc65213985f1, type: 3}
       propertyPath: m_Name
       value: PlayerController
