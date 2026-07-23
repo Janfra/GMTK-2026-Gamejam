@@ -67,7 +67,7 @@ namespace GMTK
                     if (collision.TryGetComponent(out FunctionComponent funcComponent))
                     {
                         _function = funcComponent;
-                        _number.transform.position = transform.position;
+                        _function.transform.position = transform.position;
                         return true;
                     }
                     return false;
