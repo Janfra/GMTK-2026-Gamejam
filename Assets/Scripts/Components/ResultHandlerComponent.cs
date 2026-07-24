@@ -1,4 +1,7 @@
-using System;
+using GMTK.Calculation;
+using GMTK.Generation;
+using Janito.EditorExtras;
+using TMPro;
 using UnityEngine;
 
 namespace GMTK
@@ -9,6 +12,42 @@ namespace GMTK
         private FormulaComponent _resultGenerator;
         [SerializeField]
         private CountdownComponent _countdown;
+        [SerializeField]
+        private ItemList<BaseResultCondition> _conditions;
+        [SerializeField]
+        private BaseResultCondition _startCondition;
+        [SerializeField]
+        private TMP_Text _conditionDisplay;
+
+        private BaseResultCondition _currentCondition;
+
+        private void Awake()
+        {
+            if (!_conditionDisplay)
+            {
+                _conditionDisplay = GetComponentInChildren<TMP_Text>();
+                if (!_conditionDisplay)
+                {
+                    this.LogErrorInDevelopment($"Missing text component to display conditions on {name}.");
+                }
+            }
+
+            _conditions.Initialise();
+
+            if (_startCondition)
+            {
+                _currentCondition = _startCondition;
+            }
+            else
+            {
+                _conditions.TryGet(out _currentCondition);
+            }
+        }
+
+        private void Start()
+        {
+            _conditionDisplay.SetText(_currentCondition.ConditionDescription);
+        }
 
         private void OnEnable()
         {
@@ -22,7 +61,25 @@ namespace GMTK
 
         private void ApplyResultToCountdown(int result)
         {
-            _countdown.RemainingTime += result;
+            if (_currentCondition.IsResultPositive(result))
+            {
+                _countdown.RemainingTime += result;
+            }
+            else
+            {
+                _countdown.RemainingTime -= result;
+            }
+
+            UpdateCondition();
+        }
+
+        private void UpdateCondition()
+        {
+            if (_conditions.TryGet(out var condition))
+            {
+                _currentCondition = condition;
+                _conditionDisplay.SetText(condition.ConditionDescription);
+            }
         }
     }
 }

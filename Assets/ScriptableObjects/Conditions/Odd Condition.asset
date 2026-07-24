@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943b0a8c5f9f1404fa4ea6caeb568c70, type: 3}
   m_Name: Odd Condition
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.Calculation.OddCondition
+  _conditionDescription: Result must be an odd number

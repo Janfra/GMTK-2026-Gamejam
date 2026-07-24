@@ -38,10 +38,6 @@ namespace GMTK
         private TMP_Text _resultText;
         [SerializeField]
         private OptionEntry[] _options;
-        [SerializeField]
-        private float _heightOffset;
-
-        private Vector2 _offsetPosition => new Vector2(transform.position.x, transform.position.y - _heightOffset);
         private int _result;
 
         private void OnEnable()
@@ -111,12 +107,6 @@ namespace GMTK
             _result = _options[1].GetResult(A, B);
             OnResultCalculated?.Invoke(_result);
             _resultText.SetText(_result.ToString());
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.white;
-            Gizmos.DrawSphere(_offsetPosition, 0.1f);
         }
 
         private void OnValidate()

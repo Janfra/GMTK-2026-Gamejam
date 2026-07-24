@@ -94,7 +94,6 @@ namespace GMTK
 
         private void Deselect()
         {
-            OnSelectionUpdate?.Invoke();
             switch (_type)
             {
                 case OptionType.Number:
@@ -107,6 +106,7 @@ namespace GMTK
                 default:
                     break;
             }
+            OnSelectionUpdate?.Invoke();
         }
     }
 }

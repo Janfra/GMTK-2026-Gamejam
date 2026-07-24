@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c089a52a2a4c2846bd300780c3f7d1f, type: 3}
   m_Name: Any Condition
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.Calculation.AnyCondition
+  _conditionDescription: Any result is fine!
