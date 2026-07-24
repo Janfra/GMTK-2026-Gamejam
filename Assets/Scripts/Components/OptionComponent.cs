@@ -1,3 +1,5 @@
+using Janito.EditorExtras;
+using System;
 using UnityEngine;
 
 namespace GMTK
@@ -10,16 +12,23 @@ namespace GMTK
 
     public class OptionComponent : MonoBehaviour
     {
+        public Action OnSelectionUpdate;
+
         [SerializeField]
         private OptionType _type;
+
+        [SerializeField]
+        [ReadOnly]
         private NumberComponent _number;
+        [SerializeField]
+        [ReadOnly]
         private FunctionComponent _function;
         private IDraggable _selectedDrag;
 
         public OptionType Type => _type;
-        public NumberComponent Number => _number;
-        public FunctionComponent Function => _function;
-        public bool HasSelection => Number || Function;
+        public NumberComponent NumberComponent => _number;
+        public FunctionComponent FunctionComponent => _function;
+        public bool HasSelection => NumberComponent || FunctionComponent;
 
         private void OnTriggerStay2D(Collider2D collision)
         {
@@ -37,6 +46,7 @@ namespace GMTK
                     if (TrySelect(collision))
                     {
                         _selectedDrag = draggable;
+                        OnSelectionUpdate?.Invoke();
                     }
                 }
             }
@@ -46,7 +56,13 @@ namespace GMTK
         {
             if (!HasSelection) return;
 
-            Deselect();
+            if (collision.TryGetComponent(out IDraggable draggable))
+            {
+                if (draggable == _selectedDrag)
+                {
+                    Deselect();
+                }
+            }
         }
 
 
@@ -78,6 +94,7 @@ namespace GMTK
 
         private void Deselect()
         {
+            OnSelectionUpdate?.Invoke();
             switch (_type)
             {
                 case OptionType.Number:

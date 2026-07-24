@@ -20,7 +20,6 @@ namespace GMTK
 
             if (collision.TryGetComponent(out IDraggable draggable))
             {
-                // Start dragging the draggable object
                 _currentDraggable = draggable;
                 _currentDraggable.IsBeingDragged = true;
             }
