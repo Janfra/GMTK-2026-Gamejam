@@ -46,6 +46,7 @@ namespace GMTK
                     if (TrySelect(collision))
                     {
                         _selectedDrag = draggable;
+                        _selectedDrag.IsLocked = true;
                         OnSelectionUpdate?.Invoke();
                     }
                 }
@@ -106,6 +107,9 @@ namespace GMTK
                 default:
                     break;
             }
+
+            _selectedDrag.IsLocked = false;
+            _selectedDrag = null;
             OnSelectionUpdate?.Invoke();
         }
     }

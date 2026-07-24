@@ -10,6 +10,8 @@ namespace GMTK
 
         Rigidbody2D _rb;
         public bool IsBeingDragged { get => _isBeingDragged; set => _isBeingDragged = value; }
+        public bool IsLocked { get; set; }
+
         private bool _isBeingDragged;
 
         private void Awake()

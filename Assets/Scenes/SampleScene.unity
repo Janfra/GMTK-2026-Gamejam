@@ -1206,8 +1206,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2031252868}
+  - component: {fileID: 2031252869}
   m_Layer: 0
-  m_Name: NumberContainer
+  m_Name: NumberInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1230,6 +1231,25 @@ Transform:
   - {fileID: 105752416}
   m_Father: {fileID: 1969079240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031252869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031252867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e2503e2ebdfed48b4dfa8a3ac1ce42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.NumberInventoryComponent
+  _itemPositions:
+  - {x: 0, y: 0}
+  - {x: 0.8, y: 0}
+  - {x: -0.8, y: 0}
+  - {x: -0.8, y: 0.8}
+  - {x: 0.8, y: 0.8}
+  - {x: 0, y: 0.8}
 --- !u!1 &2131321908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,8 +1259,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2131321909}
+  - component: {fileID: 2131321910}
   m_Layer: 0
-  m_Name: FunctionContainer
+  m_Name: FunctionInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1265,6 +1286,21 @@ Transform:
   - {fileID: 1254894969}
   m_Father: {fileID: 1969079240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2131321910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131321908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e2503e2ebdfed48b4dfa8a3ac1ce42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.InventoryComponent
+  _itemPositions:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0.7}
 --- !u!1001 &2091004226143711455
 PrefabInstance:
   m_ObjectHideFlags: 0
