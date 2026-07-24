@@ -7,6 +7,8 @@ namespace GMTK
 {
     public class FormulaComponent : MonoBehaviour
     {
+        public event Action<int> OnResultCalculated;
+
         [Serializable]
         class OptionEntry
         {
@@ -40,7 +42,7 @@ namespace GMTK
         private float _heightOffset;
 
         private Vector2 _offsetPosition => new Vector2(transform.position.x, transform.position.y - _heightOffset);
-        private int? _result;
+        private int _result;
 
         private void OnEnable()
         {
@@ -102,14 +104,13 @@ namespace GMTK
 
         private void CalculateResult()
         {
-            _result = null;
-
             // For now we assume the order is: digit - function - digit
             int A = _options[0].Number;
             int B = _options[2].Number;
 
             _result = _options[1].GetResult(A, B);
-            _resultText.SetText(_result.Value.ToString());
+            OnResultCalculated?.Invoke(_result);
+            _resultText.SetText(_result.ToString());
         }
 
         private void OnDrawGizmosSelected()
