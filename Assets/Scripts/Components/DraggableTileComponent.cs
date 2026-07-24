@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace GMTK
@@ -5,14 +6,30 @@ namespace GMTK
     [RequireComponent(typeof(Rigidbody2D))]
     public class DraggableTileComponent : TileComponent, ISelectable, IDraggable
     {
+        public event Action<IDraggable> OnDragStateChanged;
+
         [SerializeField]
         private LimitsComponent _limits;
 
         Rigidbody2D _rb;
-        public bool IsBeingDragged { get => _isBeingDragged; set => _isBeingDragged = value; }
+        public bool IsBeingDragged { 
+            get {
+                return _isBeingDragged;
+            }
+            set {
+                var oldState = _isBeingDragged;
+                _isBeingDragged = value;
+                if (oldState != _isBeingDragged)
+                {
+                    OnDragStateChanged?.Invoke(this);
+                }
+            }
+        }
+
         public bool IsLocked { get; set; }
 
         private bool _isBeingDragged;
+
 
         private void Awake()
         {
