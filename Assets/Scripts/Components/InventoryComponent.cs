@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 namespace GMTK
 {
+    public interface IInventoryItem : IDraggable
+    {
+        public event Action<IInventoryItem, bool> OnReturnedToInventory;
+        public void ReturnToInventory(bool isInstant);
+    }
+
     public class InventoryComponent : MonoBehaviour
     {
         [SerializeField]
@@ -40,7 +44,27 @@ namespace GMTK
                 var item = _items[i];
                 item.transform.localPosition = _itemPositions[i];
                 item.OnDragStateChanged += TryUpdatePosition;
+                item.OnReturnedToInventory += ReturnItem;
                 _itemCoroutines.TryAdd(item, null);
+            }
+        }
+
+        private void ReturnItem(IInventoryItem item, bool isInstant)
+        {
+            if (item is not DraggableTileComponent comp || !_items.Contains(comp))
+            {
+                return;
+            }
+
+            item.IsBeingDragged = false;
+            item.IsLocked = false;
+            if (isInstant)
+            {
+                comp.transform.position = GetWorldPositionOfItem(comp);
+            }
+            else
+            {
+                TryUpdatePosition(item);
             }
         }
 
@@ -66,9 +90,14 @@ namespace GMTK
             }
 
             var dragComp = draggable as DraggableTileComponent;
-            int index = _items.IndexOf(dragComp);
-            draggable.UpdateDesiredDragPosition(transform.TransformPoint(_itemPositions[index]));
+            draggable.UpdateDesiredDragPosition(GetWorldPositionOfItem(dragComp));
             _itemCoroutines[draggable] = null;
+        }
+
+        private Vector2 GetWorldPositionOfItem(DraggableTileComponent component)
+        {
+            int index = _items.IndexOf(component);
+            return transform.TransformPoint(_itemPositions[index]);
         }
 
         private void OnDrawGizmosSelected()

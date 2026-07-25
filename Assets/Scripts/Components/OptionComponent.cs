@@ -34,7 +34,7 @@ namespace GMTK
         {
             if (HasSelection)
             {
-                if (_selectedDrag.IsBeingDragged)
+                if (_selectedDrag.IsBeingDragged || !_selectedDrag.IsLocked)
                 {
                     Deselect();
                 }
@@ -93,7 +93,7 @@ namespace GMTK
             }
         }
 
-        private void Deselect()
+        public void Deselect()
         {
             switch (_type)
             {

@@ -61,7 +61,7 @@ namespace GMTK.Calculation
 
         public override string GetSymbol()
         {
-            return "÷";
+            return "/";
         }
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 namespace GMTK
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class DraggableTileComponent : TileComponent, ISelectable, IDraggable
+    public class DraggableTileComponent : TileComponent, ISelectable, IInventoryItem
     {
         public event Action<IDraggable> OnDragStateChanged;
+        public event Action<IInventoryItem, bool> OnReturnedToInventory;
 
         [SerializeField]
         private LimitsComponent _limits;
 
-        Rigidbody2D _rb;
         public bool IsBeingDragged { 
             get {
                 return _isBeingDragged;
@@ -28,8 +28,8 @@ namespace GMTK
 
         public bool IsLocked { get; set; }
 
+        private Rigidbody2D _rb;
         private bool _isBeingDragged;
-
 
         private void Awake()
         {
@@ -47,6 +47,11 @@ namespace GMTK
             {
                 _rb.MovePosition(position);
             }
+        }
+
+        public void ReturnToInventory(bool isInstant)
+        {
+            OnReturnedToInventory?.Invoke(this, isInstant);
         }
     }
 }

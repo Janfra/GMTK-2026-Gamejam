@@ -142,14 +142,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.FormulaComponent
   _resultText: {fileID: 4884859286177740278}
-  _options:
-  - _optionComponent: {fileID: 8743396227003574909}
-    _numberDecimalPlace: 0
-  - _optionComponent: {fileID: 4040856280778151082}
-    _numberDecimalPlace: 0
-  - _optionComponent: {fileID: 1361301985263269246}
-    _numberDecimalPlace: 0
-  _heightOffset: 2.1
+  _formula:
+    _formulaComposition:
+      FirstDigitSlot:
+        _optionComponent: {fileID: 8743396227003574909}
+        _numberDecimalPlace: 0
+      FunctionSlot:
+        _optionComponent: {fileID: 4040856280778151082}
+        _numberDecimalPlace: 0
+      SecondDigitSlot:
+        _optionComponent: {fileID: 1361301985263269246}
+        _numberDecimalPlace: 0
+  _sourceReassignment:
+    _numberReassignOptions: 010000000200000003000000040000000500000006000000070000000800000009000000
+    _functionReassignOptions:
+    - rid: 8660545809636917532
+    - rid: 8660545809636917533
+    - rid: 8660545809636917534
+    - rid: 8660545809636917535
+  references:
+    version: 2
+    RefIds:
+    - rid: 8660545809636917532
+      type: {class: AddFunction, ns: GMTK.Calculation, asm: Assembly-CSharp}
+      data: 
+    - rid: 8660545809636917533
+      type: {class: DivideFunction, ns: GMTK.Calculation, asm: Assembly-CSharp}
+      data: 
+    - rid: 8660545809636917534
+      type: {class: MultiplyFunction, ns: GMTK.Calculation, asm: Assembly-CSharp}
+      data: 
+    - rid: 8660545809636917535
+      type: {class: RemoveFunction, ns: GMTK.Calculation, asm: Assembly-CSharp}
+      data: 
 --- !u!1 &6111080947118219909
 GameObject:
   m_ObjectHideFlags: 0
