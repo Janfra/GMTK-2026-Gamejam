@@ -167,18 +167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3028146914527975021, guid: fbd5476275389394c846cc65213985f1, type: 3}
-      propertyPath: managedReferences[8660545762338800636].InputStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSelectStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028146914527975021, guid: fbd5476275389394c846cc65213985f1, type: 3}
-      propertyPath: managedReferences[8660545762338800636].InputCancelled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSelectEnd
-      objectReference: {fileID: 0}
-    - target: {fileID: 4490612704694866983, guid: fbd5476275389394c846cc65213985f1, type: 3}
-      propertyPath: _selectionMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 8373732379735039648, guid: fbd5476275389394c846cc65213985f1, type: 3}
       propertyPath: m_Name
       value: PlayerController
@@ -2027,26 +2015,6 @@ PrefabInstance:
       propertyPath: _resultGenerator
       value: 
       objectReference: {fileID: 1049912446}
-    - target: {fileID: 1726975266560079568, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
-      propertyPath: _conditions._initialItems.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1726975266560079568, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
-      propertyPath: '_conditions._initialItems.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 980e08ee3424429418fca69176c9ba39, type: 2}
-    - target: {fileID: 1726975266560079568, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
-      propertyPath: '_conditions._initialItems.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 8452bab3c853eda43acbef0f8473c28f, type: 2}
-    - target: {fileID: 1726975266560079568, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
-      propertyPath: '_conditions._initialItems.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b27996b81f6b4a54386ddf3b48f747dd, type: 2}
-    - target: {fileID: 1726975266560079568, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
-      propertyPath: '_conditions._initialItems.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f3a44711636ff674aa9b10e71522b49e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
