@@ -84,7 +84,7 @@ MonoBehaviour:
             m_Calls:
             - m_Target: {fileID: 4490612704694866983}
               m_TargetAssemblyTypeName: GMTK.PlayerComponent, Assembly-CSharp
-              m_MethodName: TriggerSelectStarted
+              m_MethodName: OnSelectStart
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
             m_Calls:
             - m_Target: {fileID: 4490612704694866983}
               m_TargetAssemblyTypeName: GMTK.PlayerComponent, Assembly-CSharp
-              m_MethodName: TriggerSelectEnded
+              m_MethodName: OnSelectEnd
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}

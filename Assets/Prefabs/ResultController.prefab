@@ -50,7 +50,6 @@ MonoBehaviour:
   _conditions:
     _allowRepeat: 0
     _initialItems:
-    - {fileID: 11400000, guid: 11fd756fdc523a9489e98dfe736fddc2, type: 2}
     - {fileID: 11400000, guid: 980e08ee3424429418fca69176c9ba39, type: 2}
     - {fileID: 11400000, guid: 8452bab3c853eda43acbef0f8473c28f, type: 2}
     - {fileID: 11400000, guid: b27996b81f6b4a54386ddf3b48f747dd, type: 2}
