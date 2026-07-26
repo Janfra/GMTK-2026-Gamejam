@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbea874185872f41b43ee699e1237f3, type: 3}
   m_Name: NumberColourConfiguration
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.NumberColourConfiguration
-  _oneColour: {r: 1, g: 1, b: 1, a: 1}
-  _twoColour: {r: 1, g: 1, b: 1, a: 1}
-  _threeColour: {r: 1, g: 1, b: 1, a: 1}
-  _fourColour: {r: 1, g: 1, b: 1, a: 1}
-  _fiveColour: {r: 1, g: 1, b: 1, a: 1}
-  _sixColour: {r: 1, g: 1, b: 1, a: 1}
-  _sevenColour: {r: 1, g: 1, b: 1, a: 1}
-  _eightColour: {r: 1, g: 1, b: 1, a: 1}
-  _nineColour: {r: 1, g: 1, b: 1, a: 1}
+  _oneColour: {r: 0.95686275, g: 0.8862745, b: 0.49411765, a: 1}
+  _twoColour: {r: 0.93333334, g: 0.73333335, b: 0.49019608, a: 1}
+  _threeColour: {r: 0.93333334, g: 0.3764706, b: 0.42352942, a: 1}
+  _fourColour: {r: 0.64705884, g: 0.5372549, b: 0.9529412, a: 1}
+  _fiveColour: {r: 0.40392157, g: 0.54509807, b: 0.9764706, a: 1}
+  _sixColour: {r: 0.5254902, g: 0.84705883, b: 0.9372549, a: 1}
+  _sevenColour: {r: 0.74509805, g: 0.8784314, b: 0.4509804, a: 1}
+  _eightColour: {r: 0.40784314, g: 0.7254902, b: 0.52156866, a: 1}
+  _nineColour: {r: 0.96862745, g: 0.5803922, b: 0.8509804, a: 1}
