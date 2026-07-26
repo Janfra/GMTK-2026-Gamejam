@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1577131c0c1a64588985af0e974ec0, type: 3}
   m_Name: Negative Result Colour Configuration
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.ColourTweenConfiguration
-  _targetColour: {r: 0.6698113, g: 0.14429982, b: 0, a: 1}
+  _targetColour: {r: 0.7058824, g: 0, b: 0.11372549, a: 1}
   _duration: 0.2
   _easeType: 3
   _returnsToDefault: 1
