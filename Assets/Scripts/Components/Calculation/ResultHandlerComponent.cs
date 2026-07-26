@@ -3,6 +3,7 @@ using GMTK.Generation;
 using Janito.EditorExtras;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GMTK
 {
@@ -20,6 +21,10 @@ namespace GMTK
         private TMP_Text _conditionDisplay;
 
         private BaseResultCondition _currentCondition;
+
+        [Header("Events")]
+        [SerializeField]
+        private UnityEvent<bool> _onResultOutcomeDetermined;
 
         private void Awake()
         {
@@ -61,7 +66,8 @@ namespace GMTK
 
         private void ApplyResultToCountdown(int result)
         {
-            if (_currentCondition.IsResultPositive(result))
+            bool isPositive = _currentCondition.IsResultPositive(result);
+            if (isPositive)
             {
                 _countdown.RemainingTime += result;
             }
@@ -70,6 +76,7 @@ namespace GMTK
                 _countdown.RemainingTime -= result;
             }
 
+            _onResultOutcomeDetermined.Invoke(isPositive);
             UpdateCondition();
         }
 
