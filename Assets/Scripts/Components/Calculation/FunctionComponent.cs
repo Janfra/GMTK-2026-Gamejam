@@ -28,12 +28,14 @@ namespace GMTK
             {
                 _function = value;
                 UpdateText();
+                UpdateColour();
             }
         }
 
         private void Awake()
         {
             UpdateText();
+            UpdateColour();
         }
 
         private void UpdateText()
