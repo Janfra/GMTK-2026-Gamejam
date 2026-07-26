@@ -69,11 +69,11 @@ namespace GMTK
             bool isPositive = _currentCondition.IsResultPositive(result);
             if (isPositive)
             {
-                _countdown.RemainingTime += result;
+                _countdown.IncreaseTime(result);
             }
             else
             {
-                _countdown.RemainingTime -= result;
+                _countdown.ReduceTime(result);
             }
 
             _onResultOutcomeDetermined.Invoke(isPositive);

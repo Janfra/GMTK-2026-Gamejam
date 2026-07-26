@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.ColourTweenConfiguration
   _targetColour: {r: 0.79607844, g: 1, b: 0, a: 1}
   _duration: 0.2
-  _easeType: 4
+  _easeType: 3
   _returnsToDefault: 1
   _returnDuration: 0.2
   _returnEaseType: 1

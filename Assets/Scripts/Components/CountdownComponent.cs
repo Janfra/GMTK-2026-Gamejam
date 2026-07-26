@@ -25,6 +25,9 @@ namespace GMTK
         private TMP_Text _displayText;
         private float _remainingTime;
 
+        [SerializeField]
+        private Animator _animator;
+
         [Button(ButtonExecutionModes.PlayMode)]
         protected void TestIncrease()
         {
@@ -35,6 +38,18 @@ namespace GMTK
         protected void TestDecrease()
         {
             RemainingTime -= 50;
+        }
+
+        public void ReduceTime(float time)
+        {
+            RemainingTime -= time;
+            _animator?.Play("Remove", -1, 0.0f);
+        }
+
+        public void IncreaseTime(float time)
+        {
+            RemainingTime += time;
+            _animator?.Play("Add", -1, 0.0f);
         }
 
         private void Awake()
