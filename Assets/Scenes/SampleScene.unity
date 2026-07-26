@@ -789,6 +789,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragArea
       objectReference: {fileID: 0}
+    - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8509804
+      objectReference: {fileID: 0}
     - target: {fileID: 9208081675833134605, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
