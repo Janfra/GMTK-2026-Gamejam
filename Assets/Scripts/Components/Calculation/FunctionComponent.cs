@@ -9,6 +9,10 @@ namespace GMTK
     {
         [SerializeField]
         private TMP_Text _tileText;
+        [SerializeField]
+        private SpriteRenderer _spriteRenderer;
+        [SerializeField]
+        private FunctionColourConfiguration _colourConfiguration;
 
         [SerializeReference]
         [ChildTypeSelection(typeof(BaseFunction))]
@@ -24,12 +28,14 @@ namespace GMTK
             {
                 _function = value;
                 UpdateText();
+                UpdateColour();
             }
         }
 
         private void Awake()
         {
             UpdateText();
+            UpdateColour();
         }
 
         private void UpdateText()
@@ -37,6 +43,14 @@ namespace GMTK
             if (_function != null)
             {
                 _tileText?.SetText(_function.GetSymbol());
+            }
+        }
+
+        private void UpdateColour()
+        {
+            if (_spriteRenderer != null)
+            {
+                _spriteRenderer.color = _colourConfiguration.GetFunctionColor(Function);
             }
         }
     }
