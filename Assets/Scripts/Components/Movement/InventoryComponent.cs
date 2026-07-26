@@ -64,6 +64,8 @@ namespace GMTK
             if (isInstant)
             {
                 comp.transform.position = GetWorldPositionOfItem(comp);
+                comp.OnReturned();
+                StopCoroutineFor(comp);
             }
             else
             {
@@ -73,13 +75,17 @@ namespace GMTK
 
         private void TryUpdatePosition(IDraggable draggable)
         {
+            StopCoroutineFor(draggable);
+            Coroutine coroutine = StartCoroutine(TryUpdatePositionAfterDelay(draggable));
+            _itemCoroutines[draggable] = coroutine;
+        }
+
+        private void StopCoroutineFor(IDraggable draggable)
+        {
             if (_itemCoroutines.TryGetValue(draggable, out Coroutine coroutine) && coroutine != null)
             {
                 StopCoroutine(coroutine);
             }
-
-            coroutine = StartCoroutine(TryUpdatePositionAfterDelay(draggable));
-            _itemCoroutines[draggable] = coroutine;
         }
 
         private IEnumerator TryUpdatePositionAfterDelay(IDraggable draggable)

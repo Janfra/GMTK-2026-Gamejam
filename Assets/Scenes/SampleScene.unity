@@ -516,6 +516,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 842349937210883240, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
+      propertyPath: _sourceReassignment._numberReassignOptions.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 842349937210883240, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
+      propertyPath: '_sourceReassignment._numberReassignOptions.Array.data[9]'
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1233407460282556280, guid: 2272e53ce9e264744865a01bd36e376a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -696,15 +704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
       propertyPath: m_Color.b
-      value: 0.8509804
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
       propertyPath: m_Color.g
-      value: 0.8509804
+      value: 0.8862745
       objectReference: {fileID: 0}
     - target: {fileID: 8068404498836561274, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
       propertyPath: m_Color.r
-      value: 0.8509804
+      value: 0.95686275
       objectReference: {fileID: 0}
     - target: {fileID: 9208081675833134605, guid: 5eba50744de004140b1b2474482dd44d, type: 3}
       propertyPath: m_LocalPosition.x

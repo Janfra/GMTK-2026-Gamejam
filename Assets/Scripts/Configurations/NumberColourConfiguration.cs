@@ -6,6 +6,8 @@ namespace GMTK
     public class NumberColourConfiguration : ScriptableObject
     {
         [SerializeField]
+        private Color _zeroColour = Color.white;
+        [SerializeField]
         private Color _oneColour = Color.white;
         [SerializeField]
         private Color _twoColour = Color.white;
@@ -26,9 +28,11 @@ namespace GMTK
 
         public Color GetColorForNumber(int number)
         {
-            number = Mathf.Clamp(number, 1, 9);
+            number = Mathf.Clamp(number, 0, 9);
             switch (number)
             {
+                case 0:
+                    return _zeroColour;
                 case 1:
                     return _oneColour;
                 case 2:
