@@ -22,8 +22,8 @@ namespace GMTK.Visuals
             if (config.ReturnsToDefault)
             {
                 var sequence = DOTween.Sequence().SetId(_renderer);
-                sequence.Insert(0, _renderer.DOColor(config.TargetColour, config.Duration));
-                sequence.Insert(config.Duration, _renderer.DOColor(DefaultColour, config.ReturnDuration));
+                sequence.Insert(0, _renderer.DOColor(config.TargetColour, config.Duration).SetEase(config.EaseType));
+                sequence.Insert(config.Duration, _renderer.DOColor(DefaultColour, config.ReturnDuration).SetEase(config.ReturnEaseType));
             }
             else
             {
