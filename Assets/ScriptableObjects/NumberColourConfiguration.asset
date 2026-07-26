@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbea874185872f41b43ee699e1237f3, type: 3}
   m_Name: NumberColourConfiguration
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.NumberColourConfiguration
+  _zeroColour: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   _oneColour: {r: 0.95686275, g: 0.8862745, b: 0.49411765, a: 1}
   _twoColour: {r: 0.93333334, g: 0.73333335, b: 0.49019608, a: 1}
   _threeColour: {r: 0.93333334, g: 0.3764706, b: 0.42352942, a: 1}
