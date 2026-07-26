@@ -7,6 +7,10 @@ namespace GMTK
     {
         [SerializeField]
         private TMP_Text _tileText;
+        [SerializeField]
+        private SpriteRenderer _spriteRenderer;
+        [SerializeField]
+        private NumberColourConfiguration _colourConfiguration;
 
         [SerializeField]
         private int _number;
@@ -21,6 +25,7 @@ namespace GMTK
             {
                 _number = Mathf.Clamp(value, -9, 9);
                 _tileText?.SetText(_number.ToString());
+                _spriteRenderer.color = _colourConfiguration ? _colourConfiguration.GetColorForNumber(Number) : Color.white;
             }
         }
 
@@ -29,6 +34,11 @@ namespace GMTK
             if (_tileText == null)
             {
                 _tileText = GetComponentInChildren<TMP_Text>();
+            }
+
+            if (_spriteRenderer == null)
+            {
+                _spriteRenderer = GetComponent<SpriteRenderer>();
             }
         }
 
