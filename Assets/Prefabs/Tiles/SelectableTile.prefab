@@ -170,7 +170,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8279211330573358401}
   m_Father: {fileID: 0}
@@ -296,69 +296,20 @@ MonoBehaviour:
   _deselectOnFocusLost: 1
   _onSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 392640846408073329}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a6de5dad97eca9a4e8af7cbfe05551e2, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.AnimationTools
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _onDeselect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 392640846408073329}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 770d10d56ccfed441a7c696c768adcba, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.AnimationTools
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _onMouseEnter:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 392640846408073329}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: f5e3fa73bf7c17d43a0297546cbab578, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.AnimationTools
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _onMouseExit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 392640846408073329}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 01347389348fb3f46a7c4641d4bb9bb7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.AnimationTools
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _limits: {fileID: 0}
+  _animator: {fileID: 208728329726002281}
+  _returnAnimation: {fileID: 7400000, guid: 0779fdfdf65a2e54eb854782e8ed3445, type: 2}
+  _appearAnimation: {fileID: 7400000, guid: a1aa917ad62fe2d4097c8d621433578a, type: 2}
 --- !u!95 &208728329726002281
 Animator:
   serializedVersion: 7

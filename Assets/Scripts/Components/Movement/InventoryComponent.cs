@@ -9,6 +9,9 @@ namespace GMTK
     {
         public event Action<IInventoryItem, bool> OnReturnedToInventory;
         public void ReturnToInventory(bool isInstant);
+        public void StartReturnAnimation();
+        public void OnReturned();
+        public float MoveDelay { get; }
     }
 
     public class InventoryComponent : MonoBehaviour
@@ -90,7 +93,11 @@ namespace GMTK
             }
 
             var dragComp = draggable as DraggableTileComponent;
+            dragComp.StartReturnAnimation();
+            yield return new WaitForSeconds(dragComp.MoveDelay);
+
             draggable.UpdateDesiredDragPosition(GetWorldPositionOfItem(dragComp));
+            dragComp.OnReturned();
             _itemCoroutines[draggable] = null;
         }
 

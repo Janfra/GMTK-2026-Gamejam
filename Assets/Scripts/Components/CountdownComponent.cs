@@ -27,6 +27,11 @@ namespace GMTK
 
         [SerializeField]
         private Animator _animator;
+        [SerializeField]
+        private AnimationClip _addAnimation;
+        [SerializeField]
+        private AnimationClip _removeAnimation;
+
 
         [Button(ButtonExecutionModes.PlayMode)]
         protected void TestIncrease()
@@ -43,13 +48,13 @@ namespace GMTK
         public void ReduceTime(float time)
         {
             RemainingTime -= time;
-            _animator?.Play("Remove", -1, 0.0f);
+            _animator?.Play(_removeAnimation.name, -1, 0.0f);
         }
 
         public void IncreaseTime(float time)
         {
             RemainingTime += time;
-            _animator?.Play("Add", -1, 0.0f);
+            _animator?.Play(_addAnimation.name, -1, 0.0f);
         }
 
         private void Awake()

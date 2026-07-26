@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.8862745
       objectReference: {fileID: 0}
     - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.95686275
       objectReference: {fileID: 0}
     - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_SortingOrder
@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5153139307321517403, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: _onSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5153139307321517403, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: _onDeselect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5153139307321517403, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: _onSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
