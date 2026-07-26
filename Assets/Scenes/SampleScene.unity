@@ -585,21 +585,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1283020902578242096, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1283020902578242096, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1283020902578242096, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1283020902578242096, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294177779
+    - target: {fileID: 3561047896628045563, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639676191669607361, guid: 6184d5d52859e134fb103c66ece84086, type: 3}
       propertyPath: m_Pivot.x
