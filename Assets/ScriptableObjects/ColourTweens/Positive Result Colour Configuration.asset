@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1577131c0c1a64588985af0e974ec0, type: 3}
   m_Name: Positive Result Colour Configuration
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.ColourTweenConfiguration
-  _targetColour: {r: 0, g: 1, b: 0.11764706, a: 1}
+  _targetColour: {r: 1, g: 1, b: 1, a: 1}
   _duration: 0.2
-  _easeType: 3
+  _easeType: 32
   _returnsToDefault: 1
   _returnDuration: 0.2
   _returnEaseType: 1
