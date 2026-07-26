@@ -12,6 +12,13 @@ namespace GMTK
         [SerializeField]
         private LimitsComponent _limits;
 
+        [SerializeField]
+        private Animator _animator;
+        [SerializeField]
+        private AnimationClip _returnAnimation;
+        [SerializeField]
+        private AnimationClip _appearAnimation;
+
         public bool IsBeingDragged { 
             get {
                 return _isBeingDragged;
@@ -27,6 +34,8 @@ namespace GMTK
         }
 
         public bool IsLocked { get; set; }
+
+        public float MoveDelay => _returnAnimation ? _returnAnimation.averageDuration : 0.0f;
 
         private Rigidbody2D _rb;
         private bool _isBeingDragged;
@@ -52,6 +61,16 @@ namespace GMTK
         public void ReturnToInventory(bool isInstant)
         {
             OnReturnedToInventory?.Invoke(this, isInstant);
+        }
+
+        public void StartReturnAnimation()
+        {
+            _animator.Play(_returnAnimation.name);
+        }
+
+        public void OnReturned()
+        {
+            _animator.Play(_appearAnimation.name);
         }
     }
 }
