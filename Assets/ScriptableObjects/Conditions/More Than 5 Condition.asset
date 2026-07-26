@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0fd2bf7e966844591c059fb465a14e, type: 3}
   m_Name: More Than 5 Condition
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.Calculation.MoreThanCondition
-  _conditionDescription: Result must be more than 5
-  Value: 5
+  _conditionDescription: Make a number larger than 10.
+  Value: 10

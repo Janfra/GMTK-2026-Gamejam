@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9de86c589c3cf4db96fdf2c0b914e1, type: 3}
   m_Name: Less Than 5 Condition
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.Calculation.LessThanCondition
-  _conditionDescription: Result must be less than 5
-  Value: 5
+  _conditionDescription: Make a number of less than 10.
+  Value: 10

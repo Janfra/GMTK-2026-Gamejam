@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe70d36fa3df5d4c9becbacd8917a10, type: 3}
   m_Name: Even Condition
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.Calculation.EvenCondition
-  _conditionDescription: Result must be an even number
+  _conditionDescription: Time to make an even number.
