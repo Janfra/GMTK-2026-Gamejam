@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 512252871016024326}
   - component: {fileID: 5045452560926242586}
   - component: {fileID: 1283020902578242096}
+  - component: {fileID: 4356114308324047623}
   m_Layer: 5
   m_Name: Countdown
   m_TagString: Untagged
@@ -51,6 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownComponent
   _initialTime: 60
+  _animator: {fileID: 4356114308324047623}
+  _addAnimation: {fileID: 7400000, guid: 4f4dcbe31ae1fd147bc79c93c4988ed4, type: 2}
+  _removeAnimation: {fileID: 7400000, guid: 95fe6c3004c4cf143ab3bb5bb7f57983, type: 2}
 --- !u!222 &5045452560926242586
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -151,6 +155,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &4356114308324047623
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773206097541379951}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0a330a99e3ecc14dae9f72a3223056f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5073646703712263328
 GameObject:
   m_ObjectHideFlags: 0

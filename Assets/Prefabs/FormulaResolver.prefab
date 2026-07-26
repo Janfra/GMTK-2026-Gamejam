@@ -57,6 +57,21 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f3a44711636ff674aa9b10e71522b49e, type: 2}
   _startCondition: {fileID: 11400000, guid: 11fd756fdc523a9489e98dfe736fddc2, type: 2}
   _conditionDisplay: {fileID: 8673119403656923134}
+  _onResultOutcomeDetermined:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3277181888124707209}
+        m_TargetAssemblyTypeName: GMTK.Visuals.ResultVisualComponent, Assembly-CSharp
+        m_MethodName: OnResultDetermined
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5137767452073004983
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,8 +381,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4084910638333370072, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4190875642297738233}
+    - targetCorrespondingSourceObject: {fileID: 4084910638333370072, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3277181888124707209}
   m_SourcePrefab: {fileID: 100100000, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+--- !u!212 &488150910213788300 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7215873977912121508, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+  m_PrefabInstance: {fileID: 7126292804027566632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &842349937210883240 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7589987326227035776, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
@@ -379,6 +405,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e5bcf98db44bf4e9e2754af3a21aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.FormulaComponent
+--- !u!1 &6509154025335641328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4084910638333370072, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+  m_PrefabInstance: {fileID: 7126292804027566632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4190875642297738233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509154025335641328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7e2cc313b11a447932878642557ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.SpriteTweenerComponent
+  _renderer: {fileID: 488150910213788300}
+  DefaultColour: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &3277181888124707209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509154025335641328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad806ef680e8c474e9bb09facc900996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMTK.Visuals.ResultVisualComponent
+  _tweener: {fileID: 4190875642297738233}
+  _positiveColour: {fileID: 11400000, guid: 67204ae0418764449a29cd4cf2da288e, type: 2}
+  _negativeColour: {fileID: 11400000, guid: 12eea065e4634564984cf2487a242181, type: 2}
 --- !u!4 &8970852717356977620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2205482371557705724, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
