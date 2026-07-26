@@ -9,6 +9,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -157,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.NumberComponent
   _tileText: {fileID: 6159509964816216991}
+  _spriteRenderer: {fileID: 6935263611955069008}
+  _colourConfiguration: {fileID: 11400000, guid: 9d4c1ce8aabfb8145b4d2e87a8be8bf4, type: 2}
   _number: 1
 --- !u!50 &5286259088758579198
 Rigidbody2D:
@@ -196,3 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!212 &6935263611955069008 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+  m_PrefabInstance: {fileID: 7853385014333480834}
+  m_PrefabAsset: {fileID: 0}
