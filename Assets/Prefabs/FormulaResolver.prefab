@@ -378,10 +378,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Formula
       objectReference: {fileID: 0}
-    - target: {fileID: 7589987326227035776, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
-      propertyPath: _sourceReassignment._numberReassignOptions.Array.size
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8137224583557897358, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.467

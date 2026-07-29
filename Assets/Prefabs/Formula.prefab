@@ -83,11 +83,11 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
+  m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 2, y: 1.25}
+  m_Size: {x: 1.17, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -154,7 +154,7 @@ MonoBehaviour:
         _optionComponent: {fileID: 1361301985263269246}
         _numberDecimalPlace: 0
   _sourceReassignment:
-    _numberReassignOptions: 010000000200000003000000040000000500000006000000070000000800000009000000
+    _numberReassignOptions: 01000000020000000300000004000000050000000600000007000000080000000900000000000000
     _functionReassignOptions:
     - rid: 8660545809636917532
     - rid: 8660545809636917533
@@ -327,15 +327,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b2f75922b516d8478a10dd6987e3e32, type: 2}
+  m_sharedMaterial: {fileID: -7928729266233833227, guid: 6b2f75922b516d8478a10dd6987e3e32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4286874756
+  m_fontColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -352,13 +352,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80.2
-  m_fontSizeBase: 80.2
+  m_fontSize: 46
+  m_fontSizeBase: 46
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 32
   m_VerticalAlignment: 8192
   m_textAlignment: 65535
@@ -535,7 +535,7 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1065318293342903245, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: m_SpriteTilingProperty.newSize.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1640656009243954056, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
@@ -577,6 +577,10 @@ PrefabInstance:
     - target: {fileID: 1640656009243954056, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779604420956749362, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
+      propertyPath: m_Size.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -667,6 +671,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1065318293342903245, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1640656009243954056, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -706,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 1640656009243954056, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779604420956749362, guid: dab36fc604c24a345a1f865f8bb5d667, type: 3}
+      propertyPath: m_Size.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
