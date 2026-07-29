@@ -114,17 +114,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+    - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8509804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -192,10 +196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 5
@@ -211,10 +211,6 @@ PrefabInstance:
     - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_Color.r
       value: 0.40392157
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -282,10 +278,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 2
@@ -301,10 +293,6 @@ PrefabInstance:
     - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_Color.r
       value: 0.93333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -372,10 +360,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 3
@@ -391,10 +375,6 @@ PrefabInstance:
     - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_Color.r
       value: 0.93333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -462,10 +442,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 4
@@ -481,10 +457,6 @@ PrefabInstance:
     - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_Color.r
       value: 0.64705884
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -552,10 +524,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberTile (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5286259088758579198, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6159509964816216991, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_text
       value: 1
@@ -571,10 +539,6 @@ PrefabInstance:
     - target: {fileID: 6935263611955069008, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
       propertyPath: m_Color.r
       value: 0.95686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125268328092911651, guid: 9a580eb2b15b3ff4b91c3d8858b6a808, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
