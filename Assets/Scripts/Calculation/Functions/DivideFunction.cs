@@ -7,6 +7,11 @@ namespace GMTK.Calculation
     {
         public override int GetResult(int A, int B)
         {
+            if (A == 0 || B == 0)
+            {
+                return 0;
+            }
+
             return A / B;
         }
 
