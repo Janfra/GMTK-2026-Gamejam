@@ -13,10 +13,6 @@ namespace GMTK
         private UnityEvent<PlayerComponent> _onSelect;
         [SerializeField]
         private UnityEvent<PlayerComponent> _onDeselect;
-        [SerializeField]
-        private UnityEvent _onMouseEnter;
-        [SerializeField]
-        private UnityEvent _onMouseExit;
 
         public bool IsSelected => _isSelected;
 
@@ -52,16 +48,6 @@ namespace GMTK
             {
                 Deselect();
             }
-        }
-
-        private void OnMouseEnter()
-        {
-            _onMouseEnter.Invoke();
-        }
-
-        private void OnMouseExit()
-        {
-            _onMouseExit.Invoke();
         }
     }
 }

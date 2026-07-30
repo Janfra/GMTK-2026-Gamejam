@@ -40,6 +40,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4145050681065106461, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5075447259185670349, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

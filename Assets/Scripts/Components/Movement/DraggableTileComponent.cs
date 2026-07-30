@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GMTK
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class DraggableTileComponent : TileComponent, ISelectable, IInventoryItem
+    public class DraggableTileComponent : MonoBehaviour, IInventoryItem
     {
         public event Action<IDraggable> OnDragStateChanged;
         public event Action<IInventoryItem, bool> OnReturnedToInventory;
@@ -12,12 +13,24 @@ namespace GMTK
         [SerializeField]
         private LimitsComponent _limits;
 
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
         [SerializeField]
         private AnimationClip _returnAnimation;
         [SerializeField]
         private AnimationClip _appearAnimation;
+
+        [Header("Events")]
+        [Space]
+        [SerializeField]
+        private UnityEvent _dragStart;
+        [SerializeField]
+        private UnityEvent _dragEnd;
+        [SerializeField]
+        private UnityEvent _onMouseEnter;
+        [SerializeField]
+        private UnityEvent _onMouseExit;
 
         public bool IsBeingDragged { 
             get {
@@ -28,6 +41,15 @@ namespace GMTK
                 _isBeingDragged = value;
                 if (oldState != _isBeingDragged)
                 {
+                    if (_isBeingDragged)
+                    {
+                        _dragStart.Invoke();
+                    }
+                    else
+                    {
+                        _dragEnd.Invoke();
+                    }
+
                     OnDragStateChanged?.Invoke(this);
                 }
             }
@@ -71,6 +93,16 @@ namespace GMTK
         public void OnReturned()
         {
             _animator.Play(_appearAnimation.name);
+        }
+
+        private void OnMouseEnter()
+        {
+            _onMouseEnter.Invoke();
+        }
+
+        private void OnMouseExit()
+        {
+            _onMouseExit.Invoke();
         }
     }
 }
