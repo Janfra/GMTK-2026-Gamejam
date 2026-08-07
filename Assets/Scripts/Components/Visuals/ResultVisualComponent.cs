@@ -1,3 +1,4 @@
+using Janito.EditorExtras;
 using UnityEngine;
 
 namespace GMTK.Visuals
@@ -6,8 +7,12 @@ namespace GMTK.Visuals
     {
         [SerializeField]
         private SpriteTweenerComponent _tweener;
+
+        [InlineInspector]
         [SerializeReference]
         private ColourTweenConfiguration _positiveColour;
+
+        [InlineInspector]
         [SerializeReference]
         private ColourTweenConfiguration _negativeColour;
 

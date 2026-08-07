@@ -178,8 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.NumberComponent
   _tileText: {fileID: 6159509964816216991}
   _spriteRenderer: {fileID: 6935263611955069008}
-  _colourConfiguration: {fileID: 11400000, guid: 9d4c1ce8aabfb8145b4d2e87a8be8bf4, type: 2}
   _number: 1
+  _colourConfiguration: {fileID: 11400000, guid: 9d4c1ce8aabfb8145b4d2e87a8be8bf4, type: 2}
 --- !u!50 &5286259088758579198
 Rigidbody2D:
   serializedVersion: 5

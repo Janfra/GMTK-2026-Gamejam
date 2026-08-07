@@ -1,3 +1,4 @@
+using Janito.EditorExtras;
 using TMPro;
 using UnityEngine;
 
@@ -10,10 +11,11 @@ namespace GMTK
         [SerializeField]
         private SpriteRenderer _spriteRenderer;
         [SerializeField]
-        private NumberColourConfiguration _colourConfiguration;
-
-        [SerializeField]
         private int _number;
+
+        [InlineInspector]
+        [SerializeField]
+        private NumberColourConfiguration _colourConfiguration;
 
         public int Number
         {

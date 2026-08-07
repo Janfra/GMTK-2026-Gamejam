@@ -11,6 +11,8 @@ namespace GMTK
         private TMP_Text _tileText;
         [SerializeField]
         private SpriteRenderer _spriteRenderer;
+
+        [InlineInspector]
         [SerializeField]
         private FunctionColourConfiguration _colourConfiguration;
 
