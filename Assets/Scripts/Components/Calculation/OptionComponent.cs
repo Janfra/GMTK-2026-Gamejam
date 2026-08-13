@@ -64,8 +64,8 @@ namespace GMTK
                     {
                         _selectedDrag = draggable;
                         _selectedDrag.IsLocked = true;
+                        _animator?.Play(_selectAnimationHash, -1, 0);
                         OnSelectionUpdate?.Invoke();
-                        _animator?.Play(_selectAnimationHash);
                     }
                 }
             }
@@ -160,8 +160,8 @@ namespace GMTK
 
             _selectedDrag.IsLocked = false;
             _selectedDrag = null;
+            _animator?.Play(_deselectAnimationHash, -1, 0);
             OnSelectionUpdate?.Invoke();
-            _animator?.Play(_deselectAnimationHash);
         }
     }
 }
