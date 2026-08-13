@@ -374,6 +374,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3809427500030306828, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: 'managedReferences[-2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809427500030306828, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: m_StaticValueListeners.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809427500030306828, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: 'm_StaticValueListeners.Array.data[0]'
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 4480664470083904869, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
       propertyPath: m_Name
       value: Formula
@@ -381,6 +393,18 @@ PrefabInstance:
     - target: {fileID: 8137224583557897358, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743396227003574909, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: _onSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743396227003574909, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: _onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6212825279121154084}
+    - target: {fileID: 8743396227003574909, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+      propertyPath: _onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -409,6 +433,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e5bcf98db44bf4e9e2754af3a21aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.FormulaComponent
+--- !u!114 &6212825279121154084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3809427500030306828, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}
+  m_PrefabInstance: {fileID: 7126292804027566632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0c4921506261c4581ee6bc47f273f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Janito.AnimationTools::Janito.Animations.AnimatorModifierComponent
 --- !u!1 &6509154025335641328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4084910638333370072, guid: 8aa8c24206c2fc94697f1add215d231a, type: 3}

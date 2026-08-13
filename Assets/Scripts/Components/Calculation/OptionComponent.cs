@@ -17,18 +17,35 @@ namespace GMTK
         [SerializeField]
         private OptionType _type;
 
+        [Header("Animation")]
+        [SerializeField]
+        private Animator _animator;
+        [SerializeField]
+        private AnimationClip _selectAnimation;
+        [SerializeField]
+        private AnimationClip _deselectAnimation;
+
+        [Header("Debugging")]
         [SerializeField]
         [ReadOnly]
         private NumberComponent _number;
         [SerializeField]
         [ReadOnly]
         private FunctionComponent _function;
+
         private IDraggable _selectedDrag;
+        private int _selectAnimationHash;
+        private int _deselectAnimationHash; 
 
         public OptionType Type => _type;
         public NumberComponent NumberComponent => _number;
         public FunctionComponent FunctionComponent => _function;
         public bool HasSelection => NumberComponent || FunctionComponent;
+
+        private void Awake()
+        {
+            InitialiseAnimation();
+        }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
@@ -48,6 +65,7 @@ namespace GMTK
                         _selectedDrag = draggable;
                         _selectedDrag.IsLocked = true;
                         OnSelectionUpdate?.Invoke();
+                        _animator?.Play(_selectAnimationHash);
                     }
                 }
             }
@@ -66,6 +84,38 @@ namespace GMTK
             }
         }
 
+        private void InitialiseAnimation()
+        {
+            if (_animator == null)
+            {
+                _animator = GetComponent<Animator>();
+            }
+
+            if (_animator == null)
+            {
+                this.LogWarningInDevelopment($"Animator component is not assigned in the inspector or found on the GameObject.");
+            }
+            else
+            {
+                if (_selectAnimation)
+                {
+                    _selectAnimationHash = Animator.StringToHash(_selectAnimation.name);
+                }
+                else
+                {
+                    this.LogWarningInDevelopment($"Animation clip {nameof(_selectAnimation)} is not assigned in the inspector.");
+                }
+
+                if (_deselectAnimation)
+                {
+                    _deselectAnimationHash = Animator.StringToHash(_deselectAnimation.name);
+                }
+                else
+                {
+                    this.LogWarningInDevelopment($"Animation clip {nameof(_deselectAnimation)} is not assigned in the inspector.");
+                }
+            }
+        }
 
         private bool TrySelect(Collider2D collision)
         {
@@ -111,6 +161,7 @@ namespace GMTK
             _selectedDrag.IsLocked = false;
             _selectedDrag = null;
             OnSelectionUpdate?.Invoke();
+            _animator?.Play(_deselectAnimationHash);
         }
     }
 }
