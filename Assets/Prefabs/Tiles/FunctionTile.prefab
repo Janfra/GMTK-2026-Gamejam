@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 2055676962540156047, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055676962540156047, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+      propertyPath: m_Size.y
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3119144295277417233, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
       propertyPath: m_Size.x
       value: 0.5
@@ -100,9 +108,9 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 1171799838352364638}
   m_SourcePrefab: {fileID: 100100000, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
---- !u!212 &2230085934431555745 stripped
+--- !u!212 &1060093675296848892 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 919813550782767058, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2055676962540156047, guid: 8da03f507d6a90b488a99743be9b29b6, type: 3}
   m_PrefabInstance: {fileID: 1310845298517217139}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3150025465247064942 stripped
@@ -134,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMTK.FunctionComponent
   _tileText: {fileID: 3150025465247064942}
-  _spriteRenderer: {fileID: 2230085934431555745}
+  _spriteRenderer: {fileID: 1060093675296848892}
   _colourConfiguration: {fileID: 11400000, guid: f8b430eddc6229942a15165521ac34f7, type: 2}
   _function:
     rid: 8660545768540864599
